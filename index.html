@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLD Algoritmos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- INICIO -->
+  <div id="home" class="screen">
+    <h1>BLD DB Triny</h1>
+    <button class="big-btn" onclick="openSection('corners')">CORNERS</button>
+    <button class="big-btn" onclick="openSection('edges')">EDGES</button>
+  </div>
+
+  <!-- SECCIÓN -->
+  <div id="section" class="screen hidden">
+    <button class="back-btn" onclick="goHome()">←</button>
+    <h2 id="sectionTitle"></h2>
+
+    <input 
+      type="text" 
+      id="search" 
+      placeholder="Ej: AB"
+      maxlength="2"
+      oninput="searchAlgo()"
+    >
+
+    <div id="result">
+      <p class="label">Algoritmo:</p>
+      <pre id="algo">—</pre>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
